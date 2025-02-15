@@ -18,7 +18,7 @@ Word GPT Plus is a word add-in which integrates the chatGPT model into Microsoft
 
 - Built-in prompts for translation, summarization, polishing, and academic writing
 - Multiple platforms supported
-  - OpenAI API(and other models compatible with OpenAI, such as DeepSeek)
+  - OpenAI API (and other models compatible with OpenAI, such as DeepSeek)
   - Azure OpenAI API
   - Ollama2
   - Google Gemini Pro API
@@ -39,13 +39,13 @@ Word GPT Plus is a word add-in which integrates the chatGPT model into Microsoft
 - Edge WebView2 Runtime [https://developer.microsoft.com/en-us/microsoft-edge/webview2/](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 - if you use self-hosted service, you need Node.js 18+
 
-**Note: office add-in can only used in docx file, not support doc file.**
+**Note: office add-in can only be used in docx file, it does not support doc file.**
 
 ### account
 
-Official API need an OpenAI api key, you can get it from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+Official API requires an OpenAI api key. Requst key from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
 
-You need to apply for qualification first, please go to [Azure OpenAI API application website](https://go.microsoft.com/fwlink/?linkid=2222006&clcid=0x409&culture=en-us&country=us) to apply for qualification.
+You need to register first,  go to [Azure OpenAI API application website](https://go.microsoft.com/fwlink/?linkid=2222006&clcid=0x409&culture=en-us&country=us) to register for Azure OpenA service.
 
 You need to go to [Google AI](https://developers.generativeai.google/) to apply for qualification for Google Google Gemini Pro API, and the free version is currently limited to 60 requests per minute.
 
