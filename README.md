@@ -12,7 +12,7 @@ English | [简体中文](https://github.com/Kuingsmile/word-GPT-Plus/blob/master
 
 ## Introduction
 
-Word GPT Plus is a word add-in which integrates the chatGPT model into Microsoft Word. It allows you to generate text based on the text you have written in your document. You can use it to translate, summarize, polish or even write a whole document from zero.
+Word GPT Plus is a word add-in which integrates the chatGPT model into Microsoft Word. It allows you to generate text based on the text you have written in your document. You can use it to translate, summarize, polish or even write a whole document from scratch.
 
 ## Features
 
@@ -33,29 +33,29 @@ Word GPT Plus is a word add-in which integrates the chatGPT model into Microsoft
 
 ## Requirements
 
-### software
+### Software
 
-- Microsoft Word 2016/2019 retail version , Microsoft Word 2021 or Microsoft 365
+- Microsoft Word 2016/2019 retail version, Microsoft Word 2021 or Microsoft 365
 - Edge WebView2 Runtime [https://developer.microsoft.com/en-us/microsoft-edge/webview2/](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 - if you use self-hosted service, you need Node.js 18+
 
-**Note: office add-in can only be used in docx file, it does not support doc file.**
+**Note: office add-in can only be used with docx files, it does not support doc files.**
 
-### account
+### Account
 
 Official API requires an OpenAI api key. Requst key from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
 
-You need to register first,  go to [Azure OpenAI API application website](https://go.microsoft.com/fwlink/?linkid=2222006&clcid=0x409&culture=en-us&country=us) to register for Azure OpenA service.
+You need to register first,  go to [Azure OpenAI API application website](https://go.microsoft.com/fwlink/?linkid=2222006&clcid=0x409&culture=en-us&country=us) to register for the Azure OpenAI Service.
 
-You need to go to [Google AI](https://developers.generativeai.google/) to apply for qualification for Google Google Gemini Pro API, and the free version is currently limited to 60 requests per minute.
+You need to go to [Google AI](https://developers.generativeai.google/) to apply for qualification for Google Gemini Pro API. The free version is currently limited to 60 requests per minute.
 
-Groq's api key can be applied for at [https://console.groq.com/keys](https://console.groq.com/keys).
+Groq's api key can be requested at [https://console.groq.com/keys](https://console.groq.com/keys).
 
 ## Getting Started
 
 There are two ways to install Word GPT Plus: through my free hosting service, or by self-hosting it.
 
-I recommend utilizing my hosting service as it is both user-friendly and requires no installation of additional dependencies. Furthermore, you will have access to the most up-to-date version of Word GPT Plus at all times.
+I recommend utilizing my hosting service as it is both user-friendly and does not require installation of additional dependencies. Furthermore, you will have access to the most up-to-date version of Word GPT Plus at all times.
 
 Rest assured that your privacy is protected as all data is saved using localStorage.
 
@@ -67,7 +67,7 @@ However, if you desire faster speeds and possess expertise with Node.js, self-ho
 
 This service is built using Cloudflare Pages, domain name: [https://word.msq.pub](https://word.msq.pub)
 
-**For China users, there maybe some network problems, please use `ping word.msq.pub` to see if you can access the domain.**
+**For users in China, there maybe some connectivity issues, please use `ping word.msq.pub` to see if you can access the domain.**
 
 **You can add `msq.pub` to your proxy software's rules, or use self-hosted.**
 
@@ -77,9 +77,9 @@ This service is built using Cloudflare Pages, domain name: [https://word.msq.pub
 
 2. Follow the [Sideload add-in](#sideload-add-in) instructions below to install the add-in.
 
-#### docker
+#### Docker
 
-You can also use docker to run the service, first docker pull the image, then run the container.
+You can also use Docker to run the service, first `docker pull` the image, then run the container.
 
 ```bash
 docker pull kuingsmile/word-gpt-plus
@@ -92,7 +92,7 @@ Follow the [Sideload add-in](#sideload-add-in) instructions below to install the
 
 ### Self-hosted
 
-If you want to host the add-in yourself, you will need to clone this repo and install dependencies, then run the project. Need Node.js 16+.
+If you want to host the add-in, first clone the repo and install dependencies, then run the project. Note: Requires Node.js 16+
 
 ```bash
 git clone https://github.com/Kuingsmile/Word-GPT-Plus.git
@@ -102,34 +102,37 @@ yarn run serve
 
 [manifest.xml](https://github.com/Kuingsmile/word-GPT-Plus/blob/master/release/self-hosted/manifest.xml)
 
-Then, follow the [Sideload add-in](#sideload-add-in) instructions below to install the add-in.
+Follow [Sideload add-in](#sideload-add-in) instructions below to install the add-in.
 
 ### Sideload add-in
 
 To get started with Word GPT Plus, you will need to sideload the add-in into Microsoft Word.
 
-You can find instructions provided by MicroSoft at the following link: [sideload office add-ins](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins)
+You can find instructions provided by Microsoft at the following link: [sideload office add-ins](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins)
 
 1. Go to the folder where you saved the `manifest.xml` file, for example `C:\Users\username\Documents\WordGPT`.
-2. Open the context menu for the folder(right-click the folder) and select **Properties**.
-3. Within the **Properties** dialog box, select the **Sharing** tab, and then select **Share**.
-![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-properties-dialog.png)
-4. Within the **Network access** dialog box, add yourself and any other users you want to share, choose the **Share** button, When you see confirmation that Your folder is shared, note the **full network path** that's displayed immediately following the folder name.
-![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-network-access-dialog.png)
-5. Open a new document in Word, choose the **File** tab, and then choose **Options**.
-6. Choose **Trust Center**, and then choose the **Trust Center Settings** button.
-7. Choose **Trusted Add-in Catalogs**.
-8. In the **Catalog Url** box, enter the **full network path** and then choose **Add Catalog**.
-9. Select the **Show in Menu** check box, and then choose **OK**.
-![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-trust-center-dialog.png)
-10. Close and then restart Word.
-11. Click **Insert** > **My Add-ins** > **Shared Folder**, choose **GPT Plus**, and then choose **Add**.
-12. Enjoy it!
+2. Share folder to yourself and provision users.
+  a. Open the context menu for the folder(right-click the folder) and select **Properties**.
+  b. Within the **Properties** dialog box, select the **Sharing** tab, and then select **Share**.
+    ![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-properties-dialog.png)
+  c. Within the **Network access** dialog box, add yourself and grant users access rights to Word GPT Plus by adding them here.
+  d. Choose the **Share** button.  A confirmation will be displayed when folder is shared.
+  e. Note **full network path** that's displayed immediately following the folder name.
+    ![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-network-access-dialog.png)
+3. Open a new document in Word, choose the **File** tab, and then choose **Options**.
+4. Choose **Trust Center**, and then choose the **Trust Center Settings** button.
+5. Choose **Trusted Add-in Catalogs**.
+6. In the **Catalog Url** box, enter the **full network path** and then choose **Add Catalog**.
+7. Select the **Show in Menu** check box, and then choose **OK**.
+    ![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-trust-center-dialog.png)
+8. Close and then restart Word.
+9. Click **Insert** > **My Add-ins** > **Shared Folder**, choose **GPT Plus**, and then choose **Add**.
+10. Enjoy!
 ![image](https://user-images.githubusercontent.com/96409857/234744280-9d9f13cf-536b-4fb5-adfa-cbec262d56a2.png)
 
-## How to fill in API key
+## How to enter API key
 
-After entering Word GPT Plus, click the orange `Settings` button on the homepage to enter the settings page, where you can switch APIs and fill in API keys.
+After entering Word GPT Plus, click the orange `Settings` button on the homepage to enter the settings page, where you can switch APIs and enter API keys.
 
 ## Contributing
 
