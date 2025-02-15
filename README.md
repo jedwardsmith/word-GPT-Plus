@@ -95,13 +95,13 @@ You can find instructions provided by Microsoft at the following link: [sideload
 
 1. Go to the folder where you saved the `manifest.xml` file, for example `C:\Users\username\Documents\WordGPT`.
 2. Share folder to yourself and provision users.
-    -- Open the context menu for the folder (right-click the folder) and select **Properties**.
-    -- Within the **Properties** dialog box, select the **Sharing** tab, and then select **Share**.
+    Open the context menu for the folder (right-click the folder) and select **Properties**.
+    Within the **Properties** dialog box, select the **Sharing** tab, and then select **Share**.
 
     ![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-properties-dialog.png)
 
-    -- Within the **Network access** dialog box, add yourself and grant users access rights to Word GPT Plus by adding them here. Choose the **Share** button.  A confirmation will be displayed when folder is shared.
-    -- Note **full network path** that's displayed immediately following the folder name.
+    Within the **Network access** dialog box, add yourself and grant users access rights to Word GPT Plus by adding them here. Choose the **Share** button.  A confirmation will be displayed when folder is shared.
+    Note **full network path** that's displayed immediately following the folder name.
 
     ![image](https://learn.microsoft.com/en-us/office/dev/add-ins/images/sideload-windows-network-access-dialog.png)
 4. Open a new document in Word, choose the **File** tab, and then choose **Options**.
